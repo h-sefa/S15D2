@@ -1,4 +1,5 @@
 import org.example.entity.*;
+import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -139,6 +141,8 @@ public class MainTest {
         assertEquals(differences.size(), 1);
     }
 
+
+
     @DisplayName("findUniqueWords doğru çalışıyor mu ?")
     @Test
     public void testFindUniqueWordsMethod() {
@@ -149,4 +153,6 @@ public class MainTest {
         assertEquals(results.get(results.size()-1), "wrote");
 
     }
+
+
 }
